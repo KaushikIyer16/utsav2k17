@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 75 100" >
+<defs>
+    <style>.cls-1{fill:url(#linear-gradient);}.cls-2{fill:url(#linear-gradient-2);}.cls-3{fill:url(#linear-gradient-3);}.cls-4{fill:#5e53a3;}.cls-5{fill:url(#linear-gradient-4);}.cls-6{fill:url(#linear-gradient-5);}</style>
+
+    <linearGradient id="linear-gradient" x1="-230.06" y1="1396.03" x2="-215.23" y2="1412.86" gradientTransform="translate(177.81 -1366.19) rotate(-2.49)" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#774d9f"/>
+        <stop offset="1" stop-color="#62cdf6"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="57.44" y1="171.46" x2="70.23" y2="193.63" gradientTransform="translate(251.71 -21.54) rotate(100.73)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="104.46" y1="180.15" x2="53.78" y2="168.06" gradientTransform="translate(251.71 -21.54) rotate(100.73)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="-87.04" y1="-19.11" x2="-72.03" y2="-2.08" gradientTransform="matrix(0.25, 0.8, -0.95, 0.3, 60.3, 132.22)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="22.22" y1="75.52" x2="-4.29" y2="60.8" gradientTransform="matrix(0.77, 0.64, -0.64, 0.77, 100.61, 16.85)" xlink:href="#linear-gradient"/>
+</defs>
+<title>Shapes</title>
+<g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_13" data-name="Layer 13">
+        <circle class="cls-1" cx="13.99" cy="44.19" r="13.99" transform="translate(-25.56 20.01) rotate(-40.99)"/>
+        <polygon class="cls-2" points="70.66 3.63 51.49 0 38.76 14.78 57.93 18.41 70.66 3.63"/>
+        <polygon class="cls-3" points="70.66 3.63 77.11 22.02 64.37 36.83 57.93 18.41 70.66 3.63"/>
+        <polygon class="cls-4" points="57.93 18.41 38.76 14.78 45.2 33.19 64.37 36.83 57.93 18.41"/>
+        <polygon class="cls-5" points="71 57.84 43.5 53.93 50.84 76.94 71 57.84"/>
+        <polygon class="cls-6" points="71 57.84 72.52 82.47 50.84 76.94 71 57.84"/>
+    </g>
+</g>
+<script>
+  <![CDATA[
+    console.log("hello world !!!");
+  ]]>
+</script>
+</svg>

@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'ludicrous';
+    src: url("../fonts/ludicrous/Ludicrous.otf");
+}
+@font-face {
+  font-family: 'fauna';
+  src: url("../fonts/fauna/FaunaOne-Regular.ttf");
+}
+.icons{
+  width: 60px;
+}
+.carouselprop{
+  background-color: black;
+  height: 400px;
+}
+body{
+  background-image: -webkit-linear-gradient(left,rgb(243,119,97) 0%, rgb(238,90,160) 100%);
+  background-image: -o-linear-gradient(left,rgb(243,119,97) 0%, rgb(238,90,160) 100%);
+  background-image: linear-gradient(to right, rgb(243,119,97) 0%, rgb(238,90,160) 100%);
+}
+nav{
+  box-shadow: none;
+  font-family: ludicrous;
+}
+.ludicrous-font{
+  font-family: ludicrous;
+}
+.fauna-font{
+  font-family: fauna;
+}
+.orange-balloon{
+  background-image: url("../images/orangeBalloon.png");
+}
+.purple-balloon{
+  background-image: url("../images/purpleBalloon.png");
+}
+.baloon-wiggle{
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+
+  -webkit-animation: balloonPlay1 0.6s steps(2) infinite;
+  -o-animation: balloonPlay1 0.6s steps(2) infinite;
+  animation: balloonPlay1 0.6s steps(2) infinite;
+}
+.baloon-container{
+  width: 49px;
+  height: 100px;
+  position: fixed;
+  overflow: hidden;
+  z-index: 997;
+
+}
+
+.balloon-one{
+  bottom: -100px;
+  left: 10%;
+
+  animation: balloonMove1 30s infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.95s;
+}
+.balloon-two{
+  bottom: -100px;
+  left:30%;
+  animation: balloonMove1 20s infinite;
+  animation-timing-function: ease-out;
+  animation-delay: 0.4s;
+}
+.balloon-three{
+  bottom:-100px;
+  left:50%;
+  animation: balloonMove1 26s infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.5s;
+}
+.balloon-four{
+  bottom:-100px;
+  left: 70%;
+  animation: balloonMove1 22s infinite;
+  animation-timing-function: ease-out;
+  animation-delay: 0.8s;
+}
+.balloon-five{
+  bottom:-100px;
+  left:90%;
+  animation: balloonMove1 30s infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.75s;
+}
+
+@-webkit-keyframes balloonPlay1 {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -100px;
+  }
+}
+@-o-keyframes balloonPlay1 {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -100px;
+  }
+}
+@keyframes balloonPlay1 {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -100px;
+  }
+}
+@-webkit-keyframes balloonMove1 {
+  from{
+    bottom: -100px;
+  }
+  to{
+    bottom: 120%;
+  }
+}
+@-o-keyframes balloonMove1 {
+  from{
+    bottom: -100px;
+  }
+  to{
+    bottom: 120%;
+  }
+}
+@-moz-keyframes balloonMove1 {
+  from{
+    bottom: -100px;
+  }
+  to{
+    bottom: 120%;
+  }
+}
+@keyframes balloonMove1 {
+  from{
+    bottom: -100px;
+  }
+  to{
+    bottom: 120%;
+  }
+}
+
+.mobile-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.6);
+    overflow-x: hidden;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+.mobile-nav-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    z-index: 999;
+}
+
+.mobile-nav a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 4rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.mobile-nav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 5rem;
+}
+
+.custom-nav-btn{
+  padding-top: 12px;
+  padding-left: 10px;
+}
+@media (max-device-width: 776px) {
+  #day1,#day2,#day3{
+    overflow-x: scroll;
+  }
+
+  .side-nav-custom a {
+    font-size: 17px;
+    font-weight: 500;
+    height: 71px;
+  }
+
+  .nav-size-mobile{
+    width: 50%;
+  }
+  .nav-size-mobile > li{
+    margin-top: 3%;
+  }
+  .nav-size-mobile > li >a{
+    font-size: 2vw;
+  }
+  .side-nav-custom a{
+    line-height: 60px;
+  }
+
+  .countdown-timer{
+    position:relative;
+    z-index: 998;
+    height: 50%;
+    width: 100%;
+    overflow-y: hidden;
+  }
+  .countdown-timer p{
+    font-family: ludicrous;
+    overflow-y: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-size: 7em;
+    margin-top: 15%;
+    margin-left: 50%;
+    transform: translateX(-39%);
+
+  }
+}

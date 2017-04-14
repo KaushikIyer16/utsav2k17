@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>scroll try</title>
+    <script src="./js/ScrollMagic.min.js" charset="utf-8"></script>
+    <script src="./js/TweenMax.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/animation.gsap.min.js"></script>
+    <script src="./js/debug.addIndicators.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var controller = new ScrollMagic.Controller();
+    </script>
+    <style media="screen">
+      body{
+            margin: 0px;
+            background-image:-webkit-linear-gradient(left, rgb(243,119,97) 0%, rgb(238, 90, 160) 100%);
+            background-image:-o-linear-gradient(left, rgb(243,119,97) 0%, rgb(238, 90, 160) 100%);
+            background-image:linear-gradient(to right, rgb(243,119,97) 0%, rgb(238, 90, 160) 100%);
+          }
+      .scroll-container{
+        height: 10000px;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        /*background: white;*/
+        margin: 0px;
+      }
+      #slide1{
+        height: 65%;
+        width: 120%;
+        background: url("./images/Brochure.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 10%;
+      }
+      #slide2{
+        height:65%;
+        width: 100%;
+        background: url("./images/Brochure.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+      }
+      .bg1{
+        min-width: 100px;
+      }
+      #triger1{
+        position: absolute;
+        top: 0%;
+      }
+      #triger2{
+        position: absolute;
+        top: 500px;
+      }
+      @media (max-width: 1040px) {
+        #slide1{
+          bottom: -11%;
+        }
+      }
+      @media (max-width: 1000px) and (min-width: 980px){
+        #slide1{
+          bottom: -14%;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="scroll-container">
+      <section class="slide1">
+
+        <div id="slide1" style="margin:0px !important;">
+          <!-- <img id="slide1Image" src="./Icons/Brochure.png" alt=""> -->
+        </div>
+
+      </section>
+
+      <div style="" id="triger1"></div>
+
+      <section class="slide2">
+        <div id="slide2" style="bottom:-500px;margin:0px"></div>
+      </section>
+      <div id="triger2"></div>
+    </div>
+    <script type="text/javascript">
+      // document.getElementById('slide1').style.height = window.outerHeight+"px";
+      // document.getElementById('slide1Image').style.width = window.outerWidth+"px";
+      var tween = TweenMax.to("#slide1", 1, {scale: 0.8,bottom: "-=600", ease: Linear.easeNone});
+
+    	// build scene
+    	var scene = new ScrollMagic.Scene({triggerElement: "#triger1", duration: 500,offset: 300})
+    					.setTween(tween)
+              .setPin("#slide1", {pushFollowers: false})
+              .addIndicators({name:"anim 1"})
+    					.addTo(controller);
+
+      // tween = TweenMax.to();
+
+    </script>
+  </body>
+</html>

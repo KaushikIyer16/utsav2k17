@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .orange{
+        background-image: url("./images/orangeBalloon.png");
+      }
+      .purple{
+        background-image: url("./images/purpleBalloon.png");
+      }
+      .baloon-wiggle{
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+
+        -webkit-animation: balloonPlay1 0.6s steps(2) infinite;
+    		-o-animation: balloonPlay1 0.6s steps(2) infinite;
+    		animation: balloonPlay1 0.6s steps(2) infinite;
+      }
+      .baloon-container{
+        width: 50px;
+        height: 100px;
+        position: absolute;
+        overflow: hidden;
+
+
+      }
+
+      .balloon-one{
+        bottom: -100px;
+        left: 10%;
+
+        animation: balloonMove1 30s infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1.95s;
+      }
+      .balloon-two{
+        bottom: -100px;
+        left:30%;
+        animation: balloonMove1 20s infinite;
+        animation-timing-function: ease-out;
+        animation-delay: 0.4s;
+      }
+      .balloon-three{
+        bottom:-100px;
+        left:50%;
+        animation: balloonMove1 26s infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1.5s;
+      }
+      .balloon-four{
+        bottom:-100px;
+        left: 70%;
+        animation: balloonMove1 22s infinite;
+        animation-timing-function: ease-out;
+        animation-delay: 0.8s;
+      }
+      .balloon-five{
+        bottom:-100px;
+        left:90%;
+        animation: balloonMove1 30s infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1.75s;
+      }
+
+      @-webkit-keyframes balloonPlay1 {
+    		from {
+    			background-position: 0px 0px;
+    		}
+    		to {
+    			background-position: -100px;
+    		}
+    	}
+    	@-o-keyframes balloonPlay1 {
+    		from {
+    			background-position: 0px 0px;
+    		}
+    		to {
+    			background-position: -100px;
+    		}
+    	}
+    	@keyframes balloonPlay1 {
+    		from {
+    			background-position: 0px 0px;
+    		}
+    		to {
+    			background-position: -100px;
+    		}
+    	}
+      @keyframes balloonMove1 {
+        from{
+          bottom: -100px;
+        }
+        to{
+          bottom: 120%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="baloon-container balloon-one">
+      <div class="baloon-wiggle orange">
+
+      </div>
+    </div>
+
+    <div class="baloon-container balloon-two">
+      <div class="baloon-wiggle purple">
+
+      </div>
+    </div>
+
+    <div class="baloon-container balloon-three">
+      <div class="baloon-wiggle orange">
+
+      </div>
+    </div>
+
+    <div class="baloon-container balloon-four">
+      <div class="baloon-wiggle purple">
+
+      </div>
+    </div>
+
+    <div class="baloon-container balloon-five">
+      <div class="baloon-wiggle orange">
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>BMSCE Utsav 2017 Photo Filter - Developed by Heethesh Vhavle</title>  
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style>
+        .container
+        {
+            position: absolute;
+            top: 10px; left: 10px; right: 0; bottom: 0;
+        }
+        .action
+        {
+            width: 700px;
+            height: 50px;
+            margin: 25px 0;
+        }
+        #output_image
+        {
+            position: absolute;
+            left: 50px;            
+        }
+        .btn1
+        {
+            width: 85px;
+            height: 50px;
+            margin: 5px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .btn2
+        { 
+            width: 150px;
+            height: 50px;
+            margin: 14px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="cropbox.js"></script>
+<div class="container">
+    <div class="input_div">
+        <div class="imageBox">
+            <img style="position: absolute; left: 50px; top: 50px;" src="filter1.png" class="filter" id="filter"> 
+            <div class="thumbBox"></div>
+            <div class="spinner" style="display: none">Loading...</div>
+        </div>  
+        <p id="help"><b>1. Add Image | 2. Choose Filter | 3. Click Preview | 4. Download</b></p>
+        <br>
+        <div class="action" style="position: relative; left: 20px">
+            <input type="file" id="file" style="width: 130px; height: 50px">
+            <button type="filter" class="btn2" id="btnFilter">Change Filter</button>
+            <input type="button" class="btn2" id="btnCrop" value="Preview" disabled>
+            <button type="submit" class="btn2" id="btnSave" disabled>Download</button>        
+        </div>
+        <div class="action">
+            <button type="button" class="btn1" id="btnUp" value="Pan Up">Up</button>
+            <button type="button" class="btn1" id="btnDown" value="Pan Down">Down</button>
+            <button type="button" class="btn1" id="btnLeft" value="Pan Left">Left</button>
+            <button type="button" class="btn1" id="btnRight" value="Pan Right">Right</button>
+            <button type="button" class="btn1" id="btnZoomIn" value="Zoom In">+</button>
+            <button type="button" class="btn1" id="btnZoomOut" value="Zoom Out">-</button>
+            <button type="button" class="btn1" id="btnRefresh" value="Refresh" disabled>Update</button>
+        </div>
+    </div>
+    <br>
+    <div class="output_div" id="output_div">
+        <p class="info" id="info"><b>Your Filtered Image: (Click Update if not visible)</b></p>
+        <br><br><br>
+        <canvas class="cropped" id="output" style="display:none;"></canvas>
+        <img id="output_image">
+    </div>
+</div>
+    
+<script type="text/javascript">
+    window.onload = function() {
+        var click_count = 1;
+        var options =
+        {
+            imageBox: '.imageBox',
+            thumbBox: '.thumbBox',
+            spinner: '.spinner',
+            imgSrc: 'default.png'
+        }
+        var cropper = new cropbox(options);
+        var filter_path = 'filter1.png';
+        var output_image;
+            
+        function update_image()
+        {
+            document.getElementById('filter').src = filter_path;
+            
+            var img1 = new Image();
+            img1.src = cropper.getDataURL();
+            
+            var canvas = document.getElementById("output");
+            canvas.width = 600;
+            canvas.height = 600;
+            
+            var context = canvas.getContext("2d"); 
+                    
+            img1.onload = function(){
+                var img2 = new Image();
+                img2.src = filter_path;                
+
+                context.drawImage(img1, 0, 0);
+                context.drawImage(img2, 0, 0);
+                
+                output_image = canvas.toDataURL('image/png');
+                document.getElementById('output_image').src = output_image; 
+            }    
+        }
+
+        function save_image()
+        {
+            /*var a = document.createElement('a');
+            a.setAttribute('download', 'Utsav Photo Filter.png');
+            a.setAttribute('href', link.replace("image/png", "image/octet-stream"));
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);*/
+            
+            var link = document.createElement('a');
+            var myImg = document.getElementById('output_image');
+            link.href = myImg.src;
+            link.download = 'Utsav Photo Filter.png';
+            document.body.appendChild(link);
+            link.click();
+        }
+                
+        document.querySelector('#file').addEventListener('change', function(){
+            document.getElementById('btnCrop').disabled = false;
+            document.getElementById('btnFilter').disabled = false;
+            
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                options.imgSrc = e.target.result;
+                cropper = new cropbox(options);
+            }
+            reader.readAsDataURL(this.files[0]);
+            this.files = [];
+        })
+        
+        document.querySelector('#btnFilter').addEventListener('click', function(){
+            click_count += 1;
+            if(click_count==1) {
+                filter_path = 'filter1.png';
+            } else if(click_count==2) {
+                filter_path = 'filter2.png';
+            } else if(click_count==3) {
+                filter_path = 'filter3.png';
+                click_count = 0;
+            }
+            
+            document.getElementById('filter').src = filter_path;
+            if (document.getElementById('btnSave').disabled==false){
+                update_image();
+            }
+        })
+        
+        document.querySelector('#btnCrop').addEventListener('click', function(){
+            document.getElementById('btnSave').disabled = false;
+            document.getElementById('output_div').style.display = "block"; 
+            document.getElementById('btnRefresh').disabled = false;
+            
+            update_image();
+        })
+        
+        document.querySelector('#btnSave').addEventListener('click', function(){
+            save_image();
+        })
+        document.querySelector('#btnZoomIn').addEventListener('click', function(){
+            cropper.zoomIn();
+        })
+        document.querySelector('#btnZoomOut').addEventListener('click', function(){
+            cropper.zoomOut();
+        })
+        document.querySelector('#btnLeft').addEventListener('click', function(){
+            cropper.moveLeft();
+        })
+        document.querySelector('#btnRight').addEventListener('click', function(){
+            cropper.moveRight();
+        })
+        document.querySelector('#btnUp').addEventListener('click', function(){
+            cropper.moveUp();
+        })
+        document.querySelector('#btnDown').addEventListener('click', function(){
+            cropper.moveDown();
+        })
+        document.querySelector('#btnRefresh').addEventListener('click', function(){
+            update_image();
+        })
+    };
+</script>
+
+</body>
+</html>

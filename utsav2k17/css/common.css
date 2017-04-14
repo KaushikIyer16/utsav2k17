@@ -1,0 +1,537 @@
+@font-face {
+    font-family: 'ludicrous';
+    src: url("../fonts/ludicrous/Ludicrous.otf");
+}
+@font-face {
+  font-family: 'fauna';
+  src: url("../fonts/fauna/FaunaOne-Regular.ttf");
+}
+.icons{
+  width: 60px;
+}
+.carouselprop{
+  background-color: black;
+  height: 400px;
+}
+body{
+  background-image: -webkit-linear-gradient(left,rgb(243,119,97) 0%, rgb(238,90,160) 100%);
+  background-image: -o-linear-gradient(left,rgb(243,119,97) 0%, rgb(238,90,160) 100%);
+  background-image: linear-gradient(to right, rgb(243,119,97) 0%, rgb(238,90,160) 100%);
+}
+nav{
+  box-shadow: none;
+  font-family: ludicrous;
+}
+.ludicrous-font{
+  font-family: ludicrous;
+}
+.fauna-font{
+  font-family: fauna;
+}
+.bg-image-4{
+  background: url("../images/Brochure.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top:25%;
+  width: 110%;
+  overflow: hidden;
+  opacity: 0.35;
+  height: 100%;
+  position: fixed;
+  z-index: 997;
+}
+.bg-image-3{
+  background: url("../images/bg-image-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top:8%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.2;
+  height: 100%;
+  position: fixed;
+  z-index: 995;
+}
+.bg-image-2{
+  background: url("../images/bg-image-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top:35%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.2;
+  height: 100%;
+  position: fixed;
+}
+.bg-image-1{
+  background: url("../images/bg-image-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top:25%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.2;
+  height: 100%;
+  position: fixed;
+}
+
+#day1,#day2,#day3{
+  position: relative;
+  z-index: 997;
+  font-weight: 800;
+}
+.custom-container{
+  position: relative;
+  z-index: 998;
+
+}
+.custom-size-container{
+  margin-left: 8%;
+}
+.custom-page-footer{
+  position: relative;
+  background: rgba(0, 0, 0, 0.65) !important;
+  z-index: 997;
+  font-family: ludicrous;
+}
+.custom-carousel{
+  top: 133px;
+}
+.custom-nav-ht{
+  height: 120px;
+}
+nav li{
+  margin: 0 4px;
+}
+nav li a{
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: black;
+}
+nav li a:hover{
+  height: 100px;
+  transition: all 0.5s ease-in;
+  animation: heightIncrease 0.35s;
+}
+@keyframes heightIncrease {
+  from{
+    height: 20px;
+  }
+  to{
+    height:100px;
+  }
+}
+.car{
+  height: : 100%;
+  width : 500px;
+}
+.carousel .carousel-item{
+  width : 500px;
+}
+.sponsor-img{
+  width: 140px ;
+  height: 40px ;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  position: absolute;
+}
+.sponsor-img-square{
+  width: 110px ;
+  height: 110px ;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  position: absolute;
+}
+.sponsor-img:hover{
+  width: 150px;
+  height: 60px;
+}
+.sponsor-img-square:hover{
+  width: 120px ;
+  height: 120px ;
+}
+.sponsor-lvl-two{
+  margin-top: 20%;
+}
+
+.img-circle{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+
+}
+.modal-font{
+  font-size: 20px;
+  font-family: fauna;
+}
+.tooltipped-custom{
+  padding-left: 10%;
+  color: black;
+}
+.schedule-tooltip{
+  color: black;
+}
+#divmodal{
+  padding-left: 100px;
+  padding-top: 30px;
+}
+
+.schedule-pad{
+	padding-bottom: 5%;
+}
+
+.utsav-logo{
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  top: 5%;
+  left: 5%;
+  background-image: url("../images/Logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.mobile-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.8);
+    overflow-x: hidden;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+.mobile-nav-content {
+    position: relative;
+    top: 16%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    z-index: 999;
+}
+
+.mobile-nav a {
+    padding:  30px 20px;
+    text-decoration: none;
+    font-size: 4rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.mobile-nav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 5rem;
+}
+
+.custom-nav-btn{
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.about-text{
+    font-family: fauna;
+    font-size : 1.25rem;
+    text-align: justify;
+}
+.bms-logo{
+  width: 150px;
+}
+
+/*this is events style properties*/
+.carousel{
+  margin-left: 5%;
+}
+.carousel .carousel-item{
+  width: 400px;
+  height: 300px;
+  display: block;
+}
+.custom-card{
+  height: 65%;
+  width:200px;
+  display: inline-block;
+  margin: 0 1rem;
+
+}
+.custom-card:hover{
+
+}
+.custom-card-panel{
+  position: relative;
+  width: 4300px;
+
+}
+.card-panel-overlay{
+  width: 100%;
+  overflow-x: scroll;
+}
+.svg-card{
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+}
+.custom-bg{
+    background-color: rgba(0,0,0,0);
+    background-size: 75%;
+}
+.knsi-panel{
+  height:300px;
+  overflow-y:scroll;
+}
+
+/* label color */
+   .input-field label {
+     color: #000;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #000;
+   }
+   .input-field input[type=text]{
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+
+   .input-field input[type=email]{
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* label underline focus color */
+   .input-field input[type=email]:focus {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* valid color */
+   .input-field input[type=email].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=email].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+
+   .input-field textarea{
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* label underline focus color */
+   .input-field textarea:focus {
+     border-bottom: 1px solid #000 !important;
+     box-shadow: 0 1px 0 0 #000 !important;
+   }
+
+
+@media (max-device-width: 767px) {
+  #day1,#day2,#day3{
+    overflow-x: scroll;
+  }
+
+  .side-nav-custom a {
+    font-size: 25px;
+    font-weight: 500;
+    height: 71px;
+  }
+
+  .nav-size-mobile{
+    width: 50%;
+  }
+  .nav-size-mobile > li{
+    margin-top: 3%;
+  }
+  .nav-size-mobile > li >a{
+    font-size: 2vw;
+  }
+
+  .utsav-logo{
+    background-image: url("../images/SimpleLogo.svg");
+    margin-left: -2rem;
+  }
+  .custom-footer{
+    font-size: 3vw;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+  }
+  .modal-font{
+    font-size: 2rem;
+  }
+  .event-days li a{
+    font-size: 2rem !important;
+  }
+  .about-text{
+    font-family: fauna;
+    font-size : 3rem;
+    text-align: justify;
+    font-weight: 600;
+  }
+  .card-panel-overlay{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+  }
+  .custom-card{
+    height: 250px;
+    width:250px !important;
+    display: inline-block;
+    margin: 0 1rem;
+  }
+  .custom-card-panel{
+    position: relative;
+    width: 4840px !important;
+    overflow-x: scroll;
+  }
+  #event-caraousel{
+    margin-top: 40%;
+    transform: translateY(-50%);
+    height: 1500px;
+  }
+  .carousel .carousel-item{
+    width: 600px;
+    height: 1000px;
+    display: block;
+  }
+  .knsi-panel{
+    height: 1000px;
+    font-size: 2.2rem !important;
+  }
+  .knsi-font-size{
+    font-size: 2.64rem;
+  }
+  .knsi-price{
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-device-width: 767px) {
+  #day1,#day2,#day3{
+    overflow-x: scroll;
+  }
+
+  .side-nav-custom a {
+    font-size: 25px;
+    font-weight: 500;
+    height: 71px;
+  }
+
+  .nav-size-mobile{
+    width: 50%;
+  }
+  .nav-size-mobile > li{
+    margin-top: 3%;
+  }
+  .nav-size-mobile > li >a{
+    font-size: 2vw;
+  }
+
+  .utsav-logo{
+    background-image: url("../images/SimpleLogo.svg");
+    margin-left: -2rem;
+  }
+  .page-footer{
+    font-size: 2rem;
+  }
+  .bg-image-3{
+    background: url("../images/bg-image-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top:45%;
+    width: 110%;
+    overflow: hidden;
+    opacity: 0.2;
+    height: 700px;
+    position: fixed;
+    z-index:997;
+  }
+  .bg-image-2{
+    background: url("../images/bg-image-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top:45%;
+    width: 110%;
+    overflow: hidden;
+    opacity: 0.2;
+    height: 700px;
+    position: fixed;
+  }
+  .bg-image-1{
+    background: url("../images/bg-image-1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top:45%;
+    width: 110%;
+    overflow: hidden;
+    opacity: 0.2;
+    height: 700px;
+    position: fixed;
+  }
+  #event-carousel{
+    margin-top: 50%;
+  }
+}
+@media (min-device-width: 768px) and (max-device-width: 1040px) {
+  .card-panel-overlay{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+  }
+  .custom-card{
+    height: 250px;
+    width:250px !important;
+    display: inline-block;
+    margin: 0 1rem;
+  }
+  .custom-card-panel{
+    position: relative;
+    width: 4840px !important;
+    overflow-x: scroll;
+  }
+  #event-caraousel{
+    margin-top: 40%;
+    transform: translateY(-50%);
+    height: 1500px;
+  }
+  .carousel .carousel-item{
+    width: 600px;
+    height: 600px;
+    display: block;
+  }
+  .knsi-panel{
+    height: 600px;
+    font-size: 2.2rem !important;
+  }
+  .knsi-font-size{
+    font-size: 2.54rem;
+  }
+  .knsi-price{
+    font-size: 2rem;
+  }
+}

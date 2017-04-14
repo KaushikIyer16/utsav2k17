@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'ludicrous';
+    src: url("../fonts/ludicrous/Ludicrous.otf");
+}
+*{
+  overflow-x: hidden;
+}
+body{
+      margin: 0px;
+      background-image:-webkit-linear-gradient(left, rgb(243,119,97) 0%, rgb(238, 90, 160) 100%);
+      background-image:-o-linear-gradient(left, rgb(243,119,97) 0%, rgb(238, 90, 160) 100%);
+      background-image:linear-gradient(to right, rgb(243,119,97) 0%, rgb(238, 90, 160) 100%);
+      height: 975px;
+    }
+.scroll-container{
+
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0px;
+
+}
+#slide1{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background: url("../images/PageOne.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 996;
+  bottom: 0%;
+}
+#slide2{
+  height:100%;
+  width: 100%;
+  top: 100%;
+  overflow-x: hidden;
+  background: url("../images/PageTwo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 996;
+  bottom: 0%;
+}
+#slide3{
+  height: 65%;
+  width: 100%;
+  top: 140%;
+  background: url("./Icons/Brochure.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index:998;
+  bottom: 0%;
+}*/
+.bg1{
+  min-width: 100px;
+}
+#triger1{
+  position: absolute;
+  top: 0%;
+}
+#triger2{
+  position: absolute;
+  top: 170%;
+}
+
+.countdown-timer{
+  position:fixed;
+  z-index: 997;
+  height: 50%;
+  width: 100%;
+  overflow-y: hidden;
+}
+.countdown-timer p{
+  font-family: ludicrous;
+  overflow-y: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-size: 5em;
+  margin-top: 15%;
+  margin-left: 50%;
+  transform: translateX(-20%);
+}
+.custom-navbar {
+  list-style-type:none;
+  font-family: ludicrous;
+  height: 120px;
+  right: 0px;
+  position:fixed;
+  margin-top: 2rem;
+  padding: 1rem;
+  z-index: 998;
+}
+.orange{
+  background-image: url("../images/orangeBalloon.png");
+}
+.purple{
+  background-image: url("../images/purpleBalloon.png");
+}
+.baloon-wiggle{
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+
+  -webkit-animation: balloonPlay1 0.6s steps(2) infinite;
+  -o-animation: balloonPlay1 0.6s steps(2) infinite;
+  animation: balloonPlay1 0.6s steps(2) infinite;
+}
+.baloon-container{
+  width: 49px;
+  height: 100px;
+  position: fixed;
+  overflow: hidden;
+  z-index: 995;
+
+}
+
+.balloon-one{
+  bottom: -100px;
+  left: 10%;
+
+  animation: balloonMove1 30s infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.95s;
+}
+.balloon-two{
+  bottom: -100px;
+  left:30%;
+  animation: balloonMove1 20s infinite;
+  animation-timing-function: ease-out;
+  animation-delay: 0.4s;
+}
+.balloon-three{
+  bottom:-100px;
+  left:50%;
+  animation: balloonMove1 26s infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.5s;
+}
+.balloon-four{
+  bottom:-100px;
+  left: 70%;
+  animation: balloonMove1 22s infinite;
+  animation-timing-function: ease-out;
+  animation-delay: 0.8s;
+}
+.balloon-five{
+  bottom:-100px;
+  left:90%;
+  animation: balloonMove1 30s infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.75s;
+}
+
+@-webkit-keyframes balloonPlay1 {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -100px;
+  }
+}
+@-o-keyframes balloonPlay1 {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -100px;
+  }
+}
+@keyframes balloonPlay1 {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -100px;
+  }
+}
+@-webkit-keyframes balloonMove1 {
+  from{
+    bottom: -100px;
+  }
+  to{
+    bottom: 120%;
+  }
+}
+@-o-keyframes balloonMove1 {
+  from{
+    bottom: -100px;
+  }
+  to{
+    bottom: 120%;
+  }
+}
+@-moz-keyframes balloonMove1 {
+  from{
+    bottom: -100px;
+  }
+  to{
+    bottom: 120%;
+  }
+}
+@keyframes balloonMove1 {
+  from{
+    bottom: -100px;
+  }
+  to{
+    bottom: 120%;
+  }
+}
+
+@media (max-width: 1040px) {
+  #slide1{
+    bottom: -11%;
+  }
+}
+@media (max-width: 1000px) and (min-width: 980px){
+  #slide1{
+    bottom: -14%;
+  }
+}
